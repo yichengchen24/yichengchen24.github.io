@@ -58,20 +58,17 @@
               <a href="https://lxtgh.github.io">Xiangtai Li</a><sup>2,3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://zengyh1900.github.io/">Yanhong Zeng</a><sup>3</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://zhangzjn.github.io/">Jiangning Zhang</a><sup>4</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://qianyuzqy.github.io/">Qianyu Zhou</a><sup>5</sup>,
-            </span>
-            <br>
-            <span class="author-block">
               <a href="https://github.com/ly015">Yining Li</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=T4gqdPkAAAAJ">Yunhai Tong</a><sup>1</sup>,
+              <a href="https://zengyh1900.github.io/">Yanhong Zeng</a><sup>3</sup>,
+            </span>
+            <br>
+            <span class="author-block">
+              <a href="https://jianzongwu.github.io/">Jianzong Wu</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=eqFr7IgAAAAJ">Xiangyu Zhao</a><sup>5</sup>,
             </span>
             <span class="author-block">
               <a href="https://chenkai.site/">Kai Chen</a><sup>3</sup>
@@ -79,12 +76,9 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Peking University</span>
+            <span class="author-block"><sup>1</sup>Tongji University</span>
             <span class="author-block"><sup>2</sup>S-Lab, Nanyang Technological University</span>
             <span class="author-block"><sup>3</sup>Shanghai AI Laboratory</span>
-            <br>
-            <span class="author-block"><sup>4</sup>Zhejiang University</span>
-            <span class="author-block"><sup>5</sup>Shanghai Jiao Tong University</span>
           </div>
 
           <div class="column has-text-centered">
@@ -147,7 +141,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In this work, we present MotionBooth, an innovative framework designed for animating customized subjects with precise control over both object and camera movements. By leveraging a few images of a specific object, we efficiently fine-tune a text-to-video model to capture the object's shape and attributes accurately. Our approach presents subject region loss and video preservation loss to enhance the subject's learning performance, along with a subject token cross-attention loss to integrate the customized subject with motion control signals. Additionally, we propose training-free techniques for managing subject and camera motions during inference. In particular, we utilize cross-attention map manipulation to govern subject motion and introduce a novel latent shift module for camera movement control as well. MotionBooth excels in preserving the appearance of subjects while simultaneously controlling the motions in generated videos. Extensive quantitative and qualitative evaluations demonstrate the superiority and effectiveness of our method. Models and codes will be made publicly available.
+            Diffusion-based models have shown great potential in generating high-quality images with various layouts, which can benefit downstream perception tasks. However, a fully automatic layout generation driven only by language and a suitable metric for measuring multiple generated instances has not been well explored. In this work, we present \textbf{A}uto \textbf{C}herry-\textbf{P}icker (ACP), a novel framework that generates high-quality multi-modal training examples to augment perception and multi-modal training. Starting with a simple list of natural language concepts, we first prompt Large Language Models (LLMs) to generate a detailed description and design reasonable layouts, then use an off-the-shelf text-to-image model to generate multiple images. Then, the generated data are refined using a comprehensively designed metric to ensure quality. By customizing the initial concept list, our synthetic high-quality examples boost performance in various scenarios, especially in addressing challenges associated with long-tailed distribution and imbalanced datasets. Experiment results on downstream tasks demonstrate that Auto Cherry-Picker can significantly improve the performance of existing models. In addition, we have thoroughly investigated the correlation between our metrics and the performance gains in downstream tasks. Code will be available.
           </p>
         </div>
       </div>
