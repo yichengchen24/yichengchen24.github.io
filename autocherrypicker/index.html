@@ -141,7 +141,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Diffusion-based models have shown great potential in generating high-quality images with various layouts, which can benefit downstream perception tasks. However, a fully automatic layout generation driven only by language and a suitable metric for measuring multiple generated instances has not been well explored. In this work, we present \textbf{A}uto \textbf{C}herry-\textbf{P}icker (ACP), a novel framework that generates high-quality multi-modal training examples to augment perception and multi-modal training. Starting with a simple list of natural language concepts, we first prompt Large Language Models (LLMs) to generate a detailed description and design reasonable layouts, then use an off-the-shelf text-to-image model to generate multiple images. Then, the generated data are refined using a comprehensively designed metric to ensure quality. By customizing the initial concept list, our synthetic high-quality examples boost performance in various scenarios, especially in addressing challenges associated with long-tailed distribution and imbalanced datasets. Experiment results on downstream tasks demonstrate that Auto Cherry-Picker can significantly improve the performance of existing models. In addition, we have thoroughly investigated the correlation between our metrics and the performance gains in downstream tasks. Code will be available.
+            Diffusion-based models have shown great potential in generating high-quality images with various layouts, which can benefit downstream perception tasks. However, a fully automatic layout generation driven only by language and a suitable metric for measuring multiple generated instances has not been well explored. In this work, we present <b>A</b>uto <b>C</b>herry-<b>P</b>icker (ACP), a novel framework that generates high-quality multi-modal training examples to augment perception and multi-modal training. Starting with a simple list of natural language concepts, we first prompt Large Language Models (LLMs) to generate a detailed description and design reasonable layouts, then use an off-the-shelf text-to-image model to generate multiple images. Then, the generated data are refined using a comprehensively designed metric to ensure quality. By customizing the initial concept list, our synthetic high-quality examples boost performance in various scenarios, especially in addressing challenges associated with long-tailed distribution and imbalanced datasets. Experiment results on downstream tasks demonstrate that Auto Cherry-Picker can significantly improve the performance of existing models. In addition, we have thoroughly investigated the correlation between our metrics and the performance gains in downstream tasks. Code will be available.
           </p>
         </div>
       </div>
@@ -163,7 +163,7 @@
           </div>
         </div>
         <p>
-          The overall pipeline of MotionBooth. We first fine-tune a T2V model on the subject. This procedure incorporates subject region loss, video preservation loss, and subject token cross-attention loss. During inference, we control the camera movement with a novel latent shift module. At the same time, we manipulate the cross-attention maps to govern the subject motion.
+          Illustration of Auto Cherry-Picker (ACP) pipeline. Our ACP pipeline contains a raw data generator (a) and a data filter (b) using CLIS. Conditioned on an input object list, Scene Graph Generator generates detailed attributes, relations, caption, and corresponding layouts. Subsequently, Image Generator produces a set of images based on the scene graph. These raw layouts and images are then refined through filters using CLIS-L and CLIS-I, respectively, to produce high-quality training data.
         </p>
     </div>
   </div>
@@ -235,9 +235,9 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>article{wu2024motionbooth,
-      title={MotionBooth: Motion-Aware Customized Text-to-Video Generation},
-      author={Jianzong Wu and Xiangtai Li and Yanhong Zeng and Jiangning Zhang and Qianyu Zhou and Yining Li and Yunhai Tong and Kai Chen},
+    <pre><code>article{chen2024motionbooth,
+      title={Auto Cherry-Picker: Learning from High-quality Generative Data Driven by Language},
+      author={Yicheng Chen and Xiangtai Li and Yining Li and Yanhong Zeng and Jianzong Wu and Xiangyu Zhao and Kai Chen},
       journal={arXiv pre-print},
       year={2024},
     }</code></pre>
