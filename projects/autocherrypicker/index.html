@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Auto Cherry-Picker: Learning from High-quality Generative Data Driven by Language">
+  <meta name="keywords" content="Text-to-Image Generation, Multimodal Learning, Large Language Model, Layout Control">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auto Cherry-Picker: Learning from High-quality Generative Data Driven by Language</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Auto Cherry-Picker: Learning from High-quality Generative Data Driven by Language</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yichengchen24.github.io">Yicheng Chen</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://lxtgh.github.io">Xiangtai Li</a><sup>1,3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://github.com/ly015">Yining Li</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://zengyh1900.github.io/">Yanhong Zeng</a><sup>1</sup>,
+            </span>
+            <br>
+            <span class="author-block">
+              <a href="https://jianzongwu.github.io/">Jianzong Wu</a><sup>1,4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=eqFr7IgAAAAJ">Xiangyu Zhao</a><sup>1,5</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://chenkai.site/">Kai Chen</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Shanghai AI Laboratory</span>
+            <span class="author-block"><sup>2</sup>Tongji University</span>
+            <span class="author-block"><sup>3</sup>S-Lab, Nanyang Technological University</span>
+            <br>
+            <span class="author-block"><sup>4</sup>Peking University</span>
+            <span class="author-block"><sup>5</sup>Shanghai Jiao Tong University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Paper Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2406.20085"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/yichengchen24/ACP"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/ElkRDV5VYcA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper video. -->
+<section class="hero is-small">
+  <div class="columns is-centered has-text-centered"  style="margin-top: -10px; margin-bottom: 20px;">
+    <div class="column is-three-fifths">
+      <p class="title is-4">TL;DR: Auto Cherry Picker is an innovative framework designed to synthesize training samples for both perception and multi-modal reasoning tasks from a simple object list in natural language. It employs a nowly designed metric, CLIS, to ensure the quality of the synthetic data.</p>
+      <div class="publication-video">
+        <iframe width="276" height="256" src="https://www.youtube.com/embed/ElkRDV5VYcA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Paper video.   -->
+
+<!-- Abstract. -->
+<section class="hero is-light">
+  <div class="container is-max-desktop ">
+    <div class="columns is-centered has-text-centered" style="margin-top: 10px; margin-bottom: 0px;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Diffusion-based models have shown great potential in generating high-quality images with various layouts, which can benefit downstream perception tasks. However, a fully automatic layout generation driven only by language and a suitable metric for measuring multiple generated instances has not been well explored. In this work, we present <b>A</b>uto <b>C</b>herry-<b>P</b>icker (ACP), a novel framework that generates high-quality multi-modal training examples to augment perception and multi-modal training. Starting with a simple list of natural language concepts, we first prompt Large Language Models (LLMs) to generate a detailed description and design reasonable layouts, then use an off-the-shelf text-to-image model to generate multiple images. Then, the generated data are refined using a comprehensively designed metric to ensure quality. By customizing the initial concept list, our synthetic high-quality examples boost performance in various scenarios, especially in addressing challenges associated with long-tailed distribution and imbalanced datasets. Experiment results on downstream tasks demonstrate that Auto Cherry-Picker can significantly improve the performance of existing models. In addition, we have thoroughly investigated the correlation between our metrics and the performance gains in downstream tasks. Code will be available.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Abstract. -->
+
+<!-- Method. -->
+<section class="section" style="margin-top:-50px; margin-bottom:-50px;">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <h2 class="title is-3 is-centered">ACP Framework</h2>
+            <div class="publication-img">
+              <img id="architecture" src="./static/images/method.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+            </div>
+          </div>
+        </div>
+        <p>
+          Illustration of Auto Cherry-Picker (ACP) pipeline. Our ACP pipeline contains a raw data generator (a) and a data filter (b) using CLIS. Conditioned on an input object list, Scene Graph Generator generates detailed attributes, relations, caption, and corresponding layouts. Subsequently, Image Generator produces a set of images based on the scene graph. These raw layouts and images are then refined through filters using CLIS-L and CLIS-I, respectively, to produce high-quality training data.
+        </p>
+    </div>
+  </div>
+</section>
+<!-- Method  -->
+
+<!-- Results -->
+<section>
+  <div class="container is-max-desktop" style="margin-top:-100px; margin-bottom:-50px;">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3 is-centered">Efficacy of CLIS</h2>
+        </div>
+      </div>
+      <img id="architecture" src="./static/images/consistentv2.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+      <h2 class="subtitle has-text-centered">
+        Consistent with human judgement.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container is-max-desktop" style="margin-top:-50px; margin-bottom:-50px;">
+    <div class="hero-body">
+      <img id="comparison" src="./static/images/clis-i-clip.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+      <img id="comparison" src="./static/images/clis-i-yolo.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+      <img id="comparison" src="./static/images/clis-l-clip.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+      <p>
+        Each pair of synthetic samples is generated on the same input object list, with our CLIS metric favoring the right sample in each pair.
+      </p>
+      <h2 class="subtitle has-text-centered">
+        Compared with other prevalent metrics.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container is-max-desktop" style="margin-top:-50px; margin-bottom:-50px;">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3 is-centered">Synthetic Training Samples from ACP</h2>
+        </div>
+      </div>
+      <img id="training-sample" src="./static/images/training-sample-instance-segmentation.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+      <img id="training-sample" src="./static/images/training-sample-object-detection.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+      <img id="training-sample" src="./static/images/training-sample-attribute-binding.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+      <img id="training-sample" src="./static/images/training-sample-reasoning.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+      <p>
+        Visualization of training samples for different downstream tasks. Given the same input or scene graph on the left, the CLIS increases from left to right, with final annotations on the right.
+      </p>
+      <!-- <h2 class="subtitle has-text-centered">
+        More results of synthetic training samples from ACP.
+      </h2> -->
+    </div>
+  </div>
+</section>
+<!-- /Results -->
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>article{chen2024autocherrypicker,
+      title={Auto Cherry-Picker: Learning from High-quality Generative Data Driven by Language},
+      author={Chen, Yicheng and Li, Xiangtai and Li, Yining and Zeng, Yanhong and Wu, Jianzong and Zhao, Xiangyu and Chen, Kai}
+      journal={arXiv preprint arXiv:2406.20085},
+      year={2024},
+    }</code></pre>
+  </div>
+</section>
+<!-- /BibTeX -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website source code based on the <a href="https://nerfies.github.io/"> Nerfies</a> project page. Thanks for their excellent work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
