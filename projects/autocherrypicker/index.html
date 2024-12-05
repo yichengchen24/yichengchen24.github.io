@@ -127,7 +127,7 @@
 <section class="hero is-small">
   <div class="columns is-centered has-text-centered"  style="margin-top: -10px; margin-bottom: 20px;">
     <div class="column is-three-fifths">
-      <p class="title is-4">TL;DR: Auto Cherry Picker is an innovative framework designed to synthesize training samples for both perception and multi-modal reasoning tasks from a simple object list in natural language. It employs a nowly designed metric, CLIS, to ensure the quality of the synthetic data.</p>
+      <p class="title is-4">TL;DR: Auto Cherry-Picker is an innovative training data generator for cross-modality perception and reasoning tasks. It produces scalable synthetic data that aligns with real-world distributions while maintaining high quality.</p>
       <div class="publication-video">
         <iframe width="276" height="256" src="https://www.youtube.com/embed/XehdKLQxVbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
@@ -144,7 +144,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Diffusion-based models have shown great potential in generating high-quality images with various layouts, which can benefit downstream perception tasks. However, a fully automatic layout generation driven only by language and a suitable metric for measuring multiple generated instances has not been well explored. In this work, we present <b>A</b>uto <b>C</b>herry-<b>P</b>icker (ACP), a novel framework that generates high-quality multi-modal training examples to augment perception and multi-modal training. Starting with a simple list of natural language concepts, we first prompt Large Language Models (LLMs) to generate a detailed description and design reasonable layouts, then use an off-the-shelf text-to-image model to generate multiple images. Then, the generated data are refined using a comprehensively designed metric to ensure quality. By customizing the initial concept list, our synthetic high-quality examples boost performance in various scenarios, especially in addressing challenges associated with long-tailed distribution and imbalanced datasets. Experiment results on downstream tasks demonstrate that Auto Cherry-Picker can significantly improve the performance of existing models. In addition, we have thoroughly investigated the correlation between our metrics and the performance gains in downstream tasks. Code will be available.
+            Diffusion models can generate realistic and diverse images, potentially facilitating data availability for data-intensive perception tasks. However, leveraging these models to boost performance on downstream tasks with synthetic data poses several challenges, including aligning with real data distribution, scaling synthetic sample volumes, and ensuring their quality. To bridge these gaps, we present <b>A</b>uto <b>C</b>herry-<b>P</b>icker (ACP), a novel framework that generates high-quality cross-modality training samples at scale to augment perception and multi-modal training. ACP first uses LLMs to sample descriptions and layouts based on object combinations from real data priors, eliminating the need for ground truth image captions or annotations. Next, we use an off-the-shelf controllable diffusion model to generate multiple images. Then, the generated data are refined using a comprehensively designed metric, Composite Layout and Image Score (CLIS), to ensure quality. Our customized synthetic high-quality samples boost performance in various scenarios, especially in addressing challenges associated with long-tailed distribution and imbalanced datasets. Experiment results on downstream tasks demonstrate that ACP can significantly improve the performance of existing models. In addition, we find a positive correlation between CLIS and performance gains in downstream tasks. This finding shows the potential for evaluation metrics as the role for various visual perception and MLLM tasks.
           </p>
         </div>
       </div>
@@ -161,12 +161,12 @@
           <div class="column">
             <h2 class="title is-3 is-centered">ACP Framework</h2>
             <div class="publication-img">
-              <img id="architecture" src="./static/images/method.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+              <img id="architecture" src="./static/images/acp-method.jpg" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
             </div>
           </div>
         </div>
         <p>
-          Illustration of Auto Cherry-Picker (ACP) pipeline. Our ACP pipeline contains a raw data generator (a) and a data filter (b) using CLIS. Conditioned on an input object list, Scene Graph Generator generates detailed attributes, relations, caption, and corresponding layouts. Subsequently, Image Generator produces a set of images based on the scene graph. These raw layouts and images are then refined through filters using CLIS-L and CLIS-I, respectively, to produce high-quality training data.
+          Illustration of Auto Cherry-Picker pipeline. It contains a (a) raw data generator and a (b) data filter using CLIS. Conditioned on input object combination sampled from data priors, Scene Graph Generator generates detailed attributes, relations, captions, and corresponding layouts. Subsequently, the Image Generator produces images based on the scene graph. These raw layouts and images are refined through filters using CLIS-L and CLIS-I, respectively, to produce high-quality training data.
         </p>
     </div>
   </div>
