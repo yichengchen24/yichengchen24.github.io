@@ -23,6 +23,7 @@ I am **Yicheng Chen**, and I am a Joint PhD student at [Fudan University](https:
 # 🔥 News
 
 - *2024.06*: &nbsp;🎉🎉 On-the-Fly Guidance Training for Medical Image Registration is accepted by MICCAI!
+- *2025.02*: &nbsp;🎉🎉 Auto Cherry-Picker is accepted by CVPR!
 
 # 📝 Publications 
 
