@@ -32,6 +32,20 @@ Full publications including arXiv papers can be seen [here](https://scholar.goog
 \* means equal contribution.
 
 ## Selected Publications
+<!-- MIG -->
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">In Submission</div><img src='projects/mig/static/images/arch-v2.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[MIG: Automatic Data Selection for Instruction Tuning by Maximizing Information Gain in Semantic Space](https://arxiv.org/abs/2406.20085)
+
+**Yicheng Chen**, Yining Li, Kai Hu, Zerun Ma, Haochen Ye, Kai Chen
+
+[**Project**](https://yichengchen24.github.io/projects/mig)
+|
+[**Code**](https://github.com/yichengchen24/xsample)
+
+- We present an information-based instruction-tuning datasets measurement that comprehensively evaluate data quality and diversity. Accordingly, we introduce MIG, an efficient data selection algorithm that iteratively samples data points that maximizes the information gain on the label graph.
+
 <!-- Auto Cherry-Picker -->
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2025</div><img src='projects/autocherrypicker/static/images/acp-method.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
