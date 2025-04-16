@@ -33,7 +33,7 @@ Full publications including arXiv papers can be seen [here](https://scholar.goog
 
 ## Selected Publications
 <!-- Auto Cherry-Picker -->
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2025</div><img src='images/papers/acp.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2025</div><img src='projects/autocherrypicker/static/images/acp-method.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Auto Cherry-Picker: Learning from High-quality Generative Data Driven by Language](https://arxiv.org/abs/2406.20085)
