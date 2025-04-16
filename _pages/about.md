@@ -46,6 +46,9 @@ Full publications including arXiv papers can be seen [here](https://scholar.goog
 
 - We present an information-based instruction-tuning datasets measurement that comprehensively evaluate data quality and diversity. Accordingly, we introduce MIG, an efficient data selection algorithm that iteratively samples data points that maximizes the information gain on the label graph.
 
+</div>
+</div>
+
 <!-- Auto Cherry-Picker -->
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2025</div><img src='projects/autocherrypicker/static/images/acp-method.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
