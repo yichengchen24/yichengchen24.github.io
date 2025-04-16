@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MIG: Automatic Data Selection for Instruction Tuning by Maximizing Information Gain in Semantic Space">
+  <meta name="keywords" content="Data Selection, Instruction Tuning, Large Language Model">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MIG: Automatic Data Selection for Instruction Tuning by Maximizing Information Gain in Semantic Space</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">MIG: Automatic Data Selection for Instruction Tuning by Maximizing Information Gain in Semantic Space</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yichengchen24.github.io">Yicheng Chen</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://github.com/ly015">Yining Li</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=Dn1rSvkAAAAJ">Kai Hu</a><sup>2,3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://openreview.net/profile?id=~Ma_Zerun1">Zerun Ma</a><sup>2</sup>,
+            </span>
+            <br>
+            <span class="author-block">
+              <a href="">Haochen Ye</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://chenkai.site/">Kai Chen</a><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Fudan University</span>
+            <span class="author-block"><sup>2</sup>Shanghai AI Laboratory</span>
+            <span class="author-block"><sup>3</sup>Carnegie Mellon University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Paper Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2406.20085"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/yichengchen24/xsample"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://youtu.be/XehdKLQxVbU"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                  </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper video. -->
+<!-- <section class="hero is-small">
+  <div class="columns is-centered has-text-centered"  style="margin-top: -10px; margin-bottom: 20px;">
+    <div class="column is-three-fifths">
+      <p class="title is-4">TL;DR: Auto Cherry-Picker is an innovative training data generator for cross-modality perception and reasoning tasks. It produces scalable synthetic data that aligns with real-world distributions while maintaining high quality.</p>
+      <div class="publication-video">
+        <iframe width="276" height="256" src="https://www.youtube.com/embed/XehdKLQxVbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- /Paper video.   -->
+
+<!-- Abstract. -->
+<section class="hero is-light">
+  <div class="container is-max-desktop ">
+    <div class="columns is-centered has-text-centered" style="margin-top: 10px; margin-bottom: 0px;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Data quality and diversity are pivotal in constructing effective instruction-tuning datasets. With the increasing availability of open-source instruction-tuning datasets, it is advantageous to automatically select high-quality and diverse subsets from a vast amount of data. Existing methods typically prioritize instance quality and use heuristic rules to maintain diversity. However, this absence of a comprehensive view of the entire collection often leads to suboptimal results. Moreover, heuristic rules generally focus on distance or clustering within the embedding space, which fails to capture the intent of complex instructions in semantic space accurately. To bridge this gap, we propose a unified dataset information measurement method. This method models the semantic space by constructing a label graph and quantifies diversity based on the distribution of information within the graph.  Based on such measurement, we further introduce an efficient sampling method that selects data samples iteratively to <b>M</b>aximize the <b>I</b>nformation <b>G</b>ain (MIG) in semantic space. Experiments on various datasets and base models demonstrate that MIG consistently outperforms state-of-the-art methods. Notably, the model fine-tuned with 5\% Tulu3 data sampled by MIG achieves comparable performance to the official SFT model trained on the full dataset, with improvements of +5.73\% on AlpacaEval and +6.89\% on Wildbench. This finding shows the potential for unified dataset measurement in guiding instruction data selection.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Abstract. -->
+
+<!-- Method. -->
+<section class="section" style="margin-top:-50px; margin-bottom:-50px;">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <h2 class="title is-3 is-centered">MIG</h2>
+            <div class="publication-img">
+              <img id="architecture" src="./static/images/arch-v2.jpg" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+            </div>
+          </div>
+        </div>
+        <p>
+          Illustration of (a) Data Selection Pipeline and (b) MIG Sampler. Given the raw data pool, our pipeline first applies a tagger and scorer to annotate data. Next, MIG constructs the label graph based on the label set and iteratively selects the data point that maximizes the information gain within the graph. The selected data are used for supervised fine-tuning (SFT) of LLMs.
+        </p>
+    </div>
+  </div>
+</section>
+<!-- Method  -->
+
+<!-- Results -->
+<section>
+  <div class="container is-max-desktop" style="margin-top:-100px; margin-bottom:-50px;">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3 is-centered">Comparison wieh Other Data Selection Methods</h2>
+        </div>
+      </div>
+      <img id="architecture" src="./static/images/teaser-v5.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+      <p>
+        Highlight results of MIG.
+      </p>
+      <!-- <h2 class="subtitle has-text-centered" style="margin-top: 5px;">
+        Comparison of generation results with and without CLIS.
+      </h2> -->
+      <!-- <img id="architecture" src="./static/images/consistentv2.png" style="width:600px; margin-top:10px; margin-bottom:10px; display: block; margin-left: auto; margin-right: auto;"/>
+      <h2 class="subtitle has-text-centered">
+        Consistent with human judgement.
+      </h2>
+      <img id="architecture" src="./static/images/cor-clis-i-v4.png" style="width:600px; margin-top:10px; margin-bottom:10px; display: block; margin-left: auto; margin-right: auto;"/>
+      <h2 class="subtitle has-text-centered">
+        Correlation between CLIS and performance gains on downstream tasks.
+      </h2>
+      <img id="comparison" src="./static/images/clis-i-clip.png" style="width:600px; margin-top:5px; margin-bottom:1px; display: block; margin-left: auto; margin-right: auto;"/>
+      <img id="comparison" src="./static/images/clis-i-yolo.png" style="width:600px; margin-top:5px; margin-bottom:1px; display: block; margin-left: auto; margin-right: auto;"/>
+      <img id="comparison" src="./static/images/clis-l-clip.png" style="width:600px; margin-top:5px; margin-bottom:1px; display: block; margin-left: auto; margin-right: auto;"/>
+      <p>
+        Each pair of synthetic samples is generated on the same input object list, with our CLIS metric favoring the right sample in each pair.
+      </p>
+      <h2 class="subtitle has-text-centered" style="margin-top: 5px;">
+        Comparison of CLIS-I with other prevalent metrics.
+      </h2>
+      <img id="architecture" src="./static/images/appendix-clis-l-comp-v1.jpg" style="width:600px; margin-top:10px; margin-bottom:10px; display: block; margin-left: auto; margin-right: auto;"/>
+      <h2 class="subtitle has-text-centered">
+        Comparison of CLIS-L and the HRS metric.
+      </h2> -->
+    </div>
+  </div>
+</section>
+<!-- /Results -->
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>article{chen2024autocherrypicker,
+      title={Auto Cherry-Picker: Learning from High-quality Generative Data Driven by Language},
+      author={Chen, Yicheng and Li, Xiangtai and Li, Yining and Zeng, Yanhong and Wu, Jianzong and Zhao, Xiangyu and Chen, Kai}
+      journal={arXiv preprint arXiv:2406.20085},
+      year={2024},
+  }</code></pre>
+  </div>
+</section>
+<!-- /BibTeX -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website source code based on the <a href="https://nerfies.github.io/"> Nerfies</a> project page. Thanks for their excellent work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
