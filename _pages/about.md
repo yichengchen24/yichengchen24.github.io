@@ -42,7 +42,7 @@ Full publications including arXiv papers can be seen [here](https://scholar.goog
 
 [**Project**](https://yichengchen24.github.io/projects/mig)
 |
-[**Code**](https://github.com/yichengchen24/xsample)
+[**Code**](https://github.com/yichengchen24/MIG)
 
 - We present an information-based instruction-tuning datasets measurement that comprehensively evaluate data quality and diversity. Accordingly, we introduce MIG, an efficient data selection algorithm that iteratively samples data points that maximizes the information gain on the label graph.
 
