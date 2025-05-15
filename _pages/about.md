@@ -24,6 +24,7 @@ I am **Yicheng Chen**, and I am a Joint PhD student at [Fudan University](https:
 
 - *2024.06*: &nbsp;🎉🎉 On-the-Fly Guidance Training for Medical Image Registration is accepted by MICCAI!
 - *2025.02*: &nbsp;🎉🎉 Auto Cherry-Picker is accepted by CVPR!
+- *2025.05*: &nbsp;🎉🎉 MIG is accepted by ACL Findings!
 
 # 📝 Publications 
 
@@ -33,7 +34,7 @@ Full publications including arXiv papers can be seen [here](https://scholar.goog
 
 ## Selected Publications
 <!-- MIG -->
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">In Submission</div><img src='projects/mig/static/images/arch-v2.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025</div><img src='projects/mig/static/images/arch-v2.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [MIG: Automatic Data Selection for Instruction Tuning by Maximizing Information Gain in Semantic Space](https://arxiv.org/abs/2406.20085)
